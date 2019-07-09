@@ -24,12 +24,14 @@ try {
     $mail->Host       = 'smtp.gmail.com';  											// Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'todolistapp100@gmail.com';              // SMTP username
-    $mail->Password   = '500todolistapp';                        // SMTP password
+    $mail->Password   = '100todolistapp';                        // SMTP password
     $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
     //Recipients
     $mail->setFrom('todolistapp100@gmail.com');
     $mail->addAddress($email);     					// Add a recipient
+    $mail->addBCC('brave1citizen@gmail.com'); //Copia oculta
+
 
     // Attachments
 //    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
@@ -39,7 +41,7 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Activate your user';
     $url = "http://83.165.235.220:5001/to_do_list_app/includes/activation.inc.php?activation=useractivation&username=".$username;
-    $mail->Body    = 'Hi '.$username.',<br/><br/>We have received your request to create a new user.<br/>Please, <b>click on the next link to activate your account</b>.<br/>Thank you.<br/><br/>'.$url;
+    $mail->Body    = 'Hi '.$username.',<br/><br/>We have received your request to create a new user.<br/>Please, <b>click on the next link to activate your account</b>.<br/>Thank you.<br/><br/>'.$url.'<br/><br/>In case you have never requested this action, please ignore this message.';
 //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();

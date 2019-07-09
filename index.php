@@ -9,6 +9,7 @@
 	<meta charset="utf-8">
 
 	<title>Index</title>
+	<link rel="shortcut icon" href="images/favicon.png">
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
@@ -40,7 +41,7 @@
     else if (isset($_GET['error'])) {
       if ($_GET['error'] == "emptyfields") {
         echo '	<div id="login">
-  					<p><span class="btn-round">:-)</span></p>
+  					<p><span class="btn-round">:-(</span></p>
   					<h1 align = "center"><strong>Welcome.</strong> Please login.</h1>
             <p class="message" align="center" style="color:red">Fill in all fields!</p>
             <form action="includes/login.inc.php" method="post">
@@ -57,7 +58,7 @@
       }
       else if ($_GET['error'] == "sqlerror") {
         echo '	<div id="login">
-  					<p><span class="btn-round">:-)</span></p>
+  					<p><span class="btn-round">:-(</span></p>
   					<h1 align = "center"><strong>Welcome.</strong> Please login.</h1>
             <p class="message" align="center" style="color:red">Sorry, something went wrong. Try again later.</p>
             <form action="includes/login.inc.php" method="post">
@@ -74,7 +75,7 @@
       }
       else if ($_GET['error'] == "wrongpwd") {
         echo '	<div id="login">
-  					<p><span class="btn-round">:-)</span></p>
+  					<p><span class="btn-round">:-(</span></p>
   					<h1 align = "center"><strong>Welcome.</strong> Please login.</h1>
             <p class="message" align="center" style="color:red">Wrong password. Please try again.</p>
             <form action="includes/login.inc.php" method="post">
@@ -91,7 +92,7 @@
       }
       else if ($_GET['error'] == "nouser") {
         echo '	<div id="login">
-  					<p><span class="btn-round">:-)</span></p>
+  					<p><span class="btn-round">:-(</span></p>
   					<h1 align = "center"><strong>Welcome.</strong> Please login.</h1>
             <p class="message" align="center" style="color:red">That user is not correct.</p>
             <form action="includes/login.inc.php" method="post">
@@ -109,7 +110,7 @@
     }
     else {
 			echo '	<div id="login">
-					<p><span class="btn-round">:-)</span></p>
+					<img class="img-responsive" src="images/favicon.png">
 					<h1 align = "center"><strong>Welcome.</strong> Please login.</h1>
           <form action="includes/login.inc.php" method="post">
 						<fieldset>

@@ -143,3 +143,11 @@ form fieldset a:hover { text-decoration: underline;
 	text-align: center;
 	width: 50px;
 }
+
+.img-responsive {
+  margin: 30px 120px;
+  display: block;
+  padding-bottom: 10px;
+  height: auto;
+  max-width: 20%;
+}

@@ -33,6 +33,7 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
   <head>
     <meta charset="utf-8">
     <title>List of To Do's</title>
+    <link rel="shortcut icon" href="images/favicon.png">   
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">

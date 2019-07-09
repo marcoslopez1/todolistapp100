@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 
 	<title>Sign up</title>
+	<link rel="shortcut icon" href="images/favicon.png">
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
@@ -17,7 +18,7 @@
 <body>
 
 	<div id="login">
-		<p><span class="btn-round">:-)</span></p>
+		<img class="img-responsive" src="images/favicon.png">
 		<h1 align = "center"><strong>Welcome.</strong> Please sign up.</h1>
 
 		<!--Here the error messages based on the error definition we set in the urls. Those error messages in the urls have been created in the file "signup.inc.php" file-->
@@ -61,7 +62,7 @@
 				<p align="center"><input type="password" name="password" id="password" required placeholder=""></p>
 				<p>Repeat your password:</p>
 				<p align="center"><input type="password" name="repassword" id="repassword" required placeholder=""></p>
-				<p class="terms"><input type="checkbox" name="terms" value="1"/> I have read and accept the <a class="terms" href="#">terms and conditions</a>.<br></p>
+				<p class="terms"><input type="checkbox" name="terms" value="1"/> I have read and accept the <a class="terms" href="termsofuse.html" target="blank">terms and conditions</a>.<br></p>
 				<p align="center"><input type="submit" name ="create_account" value="Create Account"></p>
 			</fieldset>
 		</form>
