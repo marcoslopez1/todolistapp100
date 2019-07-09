@@ -32,7 +32,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';  											// Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'todolistapp100@gmail.com';              // SMTP username
-    $mail->Password   = '500todolistapp';                        // SMTP password
+    $mail->Password   = '100todolistapp';                        // SMTP password
     $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
@@ -48,7 +48,7 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Instructions to change your password';
     $url = "http://83.165.235.220:5001/to_do_list_app/newpwd.php?request=changepassword&hashedemail=".$hashedemail;
-    $mail->Body    = 'Hi there,<br/><br/>We have received your request to change your password. Please <b>click on the link below</b> for further instructions.<br/>Thank you.<br/><br/>'.$url;
+    $mail->Body    = 'Hi there,<br/><br/>We have received your request to change your password. Please <b>click on the link below</b> for further instructions.<br/>Thank you.<br/><br/>'.$url.'<br/><br/>In case you have never requested this action, please ignore this message.';
 //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();

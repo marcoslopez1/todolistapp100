@@ -2,6 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>New Password</title>
+	<link rel="shortcut icon" href="images/favicon.png">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
 

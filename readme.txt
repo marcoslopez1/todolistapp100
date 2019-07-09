@@ -1,3 +1,10 @@
+v1.0.3:
+--
+When creating account admin mail in BCC (copia oculta) to control growth.
+New page of Terms and Conditions added.
+Added the option to keep the session started for a period of time in the login.inc.php file.
+Style changes.
+
 v1.0.2:
 --
 Style changes.

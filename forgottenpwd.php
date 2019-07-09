@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 
 	<title>Forgotten Password</title>
+	<link rel="shortcut icon" href="images/favicon.png">
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
@@ -31,7 +32,7 @@ if (isset($_GET['request'])=="sent") {
 	}
 else {
 	echo '<div id="login">
-		<p><span class="btn-round">:-)</span></p>
+		<img class="img-responsive" src="images/favicon.png">
 		<h1 align = "center"><strong>Please provide us your email address.</strong></h1></br>
 		<form action="includes/forgottenpwd.inc.php" method="post">
 			<fieldset>
