@@ -1,5 +1,7 @@
 <?php
 
+$sessionlifetime = 2592000;
+session_set_cookie_params($sessionlifetime);
 session_start();
 
 require 'includes/dbh.inc.php';
@@ -13,6 +15,7 @@ $itemsQuery = $db->prepare("
   SELECT id, name, done
   FROM items
   WHERE userid = :user
+  ORDER BY done
 ");
 
 $itemsQuery->execute([
@@ -33,7 +36,7 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
   <head>
     <meta charset="utf-8">
     <title>List of To Do's</title>
-    <link rel="shortcut icon" href="images/favicon.png">   
+    <link rel="shortcut icon" href="images/favicon.png">
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -41,9 +44,26 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
     <link href="css/style_list.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Notificacion pop up -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $("div.alert-box").delay(1800).fadeOut();
+      });
+    </script>
+
+
   </head>
 
   <body>
+
+
+    <?php
+      if(isset($_GET['action'])){
+      echo "<div class='alert-box'>The item has been deleted.</div>";
+      }
+    ?>
 
     <table style="width:100%" class="table">
       <tr>
@@ -65,9 +85,21 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
     <div id="login">
     </div>
 
+
     <div class="list">
 
-        <h1 class="header">My To Do's</h1>
+      <form class="item-add" action="includes/newtask.inc.php" method="post" align="center">
+        <input type="text" name="name" id="name" placeholder="Create a new task here." class="input" autocomplete="off" required>
+        <input type="submit" value="Add" class="submit">
+      </form>
+
+    </div>
+
+    <br/>
+
+    <div class="list">
+
+        <h2 class="header" align="center">My To Do's</h2>
 
         <?php if(!empty($items)): ?>
         <ul class="items">
@@ -90,6 +122,7 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
               <?php endif; ?>
               <!-- Display of the Delete button will always be visible -->
               <a href="includes/delete.inc.php?status=delete&item=<?php echo $item['id']; ?>" class="delete-button">Delete</a>
+                  <!-- Notification pop up -->
             </li>
           <?php endforeach; ?>
         </ul>
@@ -97,10 +130,6 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
         <p>You haven't added any items yet.</p>
       <?php endif; ?>
 
-        <form class="item-add" action="includes/newtask.inc.php" method="post" align="center">
-          <input type="text" name="name" id="name" placeholder="Create a new task here." class="input" autocomplete="off">
-          <input type="submit" value="Add" class="submit">
-        </form>
 
       </div>
 

@@ -1,5 +1,7 @@
 <?php
   //required for the login system
+  $sessionlifetime = 2592000;
+  session_set_cookie_params($sessionlifetime);
   session_start();
 ?>
 

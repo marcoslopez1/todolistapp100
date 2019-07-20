@@ -24,6 +24,6 @@ if(isset($_GET['status'], $_GET['item'])){
 
 }
 
-header('Location: ../todos.php');
+header('Location: ../todos.php?action=itemdeleted');
 
  ?>
