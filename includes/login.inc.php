@@ -40,10 +40,10 @@ if(isset($_POST['login'])) {
         //In case the password matchs
         else if ($pwdCheck == true) {
           //Here we define how much the session can be started withoutexplicitatly sign out, in seconds
-          $sessionlifetime = 2592000;
-          session_set_cookie_params($sessionlifetime);
+          require '../config.php';
           //Now we start session
           session_start();
+          setcookie(session_name(),session_id(),time()+$sessionlifetime);
           //Now we create the sessions variables with the values we get in return from the db after checking the match
           $_SESSION['username'] = $row['username'];
           $_SESSION['name'] = $row['name'];

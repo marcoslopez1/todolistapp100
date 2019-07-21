@@ -1,8 +1,8 @@
 <?php
 
-$sessionlifetime = 2592000;
-session_set_cookie_params($sessionlifetime);
+require 'config.php';
 session_start();
+setcookie(session_name(),session_id(),time()+$sessionlifetime);
 
 require 'includes/dbh.inc.php';
 
@@ -130,11 +130,13 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
         <p>You haven't added any items yet.</p>
       <?php endif; ?>
 
-
       </div>
 
-
-
+      <?php
+      //Version variables
+      require 'config.php';
+      echo '<p align="center" class="terms">'.$version_id.'<br/>made with <a class="regular">♥</a> and <strong>< / ></strong> by <a class="regular" href="https://marcoslopezsite.com" target="blank">Marcos López</a></p>';
+      ?>
 
   </body>
 </html>

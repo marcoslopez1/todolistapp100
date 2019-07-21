@@ -1,8 +1,9 @@
 <?php
   //required for the login system
-  $sessionlifetime = 2592000;
-  session_set_cookie_params($sessionlifetime);
+  require 'config.php';
   session_start();
+  setcookie(session_name(),session_id(),time()+$sessionlifetime);
+
 ?>
 
 <html lang="en-Us">
@@ -127,12 +128,9 @@
 				</div>';
 		}
 
-
-
-
-
-
-
+    //Version variables
+    require 'config.php';
+    echo '<p align="center" class="terms">'.$version_id.'<br/>made with <a>♥</a> and <strong>< / ></strong> by <a href="https://marcoslopezsite.com" target="blank">Marcos López</a></p>';
 
 	?>
 

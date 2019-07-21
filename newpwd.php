@@ -90,6 +90,13 @@
 		</div>';
 	}
 
+
+	//Version variables
+	require 'config.php';
+	echo '<p align="center" class="terms">'.$version_id.'<br/>made with <a>♥</a> and <strong>< / ></strong> by <a href="https://marcoslopezsite.com" target="blank">Marcos López</a></p>';
+
+
+
 	 ?>
 
 
