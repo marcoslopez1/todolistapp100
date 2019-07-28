@@ -9,6 +9,6 @@ session_unset();
 //This will delete the values of the session variables (condition we have to know if an user is logged in)
 session_destroy();
 
-//We redirect to the index.php wihout values on the session variables. This will show the login option again, since it understands the user is not logged in
-header("Location: ../index.php")
+//We redirect to the login.php wihout values on the session variables. This will show the login option again, since it understands the user is not logged in
+header("Location: ../login.php")
 ?>

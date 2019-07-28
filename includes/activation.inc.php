@@ -82,7 +82,7 @@ if ($_GET['activation'] == "useractivation") {
   		echo '<div id="login">
   			<p><span class="btn-round">:-(</span></p>
   			<h1 align = "center"><strong>Something wrong happened.</strong> Please, try again later</h1></br>
-					<form action="../index.php" method="get">
+					<form action="../login.php" method="get">
 						<fieldset>
 	  					<p align="center"><input type="submit" value="Return to home page"></p>
 	  				</fieldset>
@@ -93,7 +93,7 @@ if ($_GET['activation'] == "useractivation") {
   		echo '<div id="login">
   			<p><span class="btn-round">:-(</span></p>
   			<h1 align = "center"><strong>Something wrong happened.</strong> Please, try again later</h1></br>
-				<form action="../index.php" method="get">
+				<form action="../login.php" method="get">
 					<fieldset>
 						<p align="center"><input type="submit" value="Return to home page"></p>
 					</fieldset>
@@ -107,7 +107,7 @@ if ($_GET['activation'] == "useractivation") {
       echo '<div id="login">
   		<p><span class="btn-round">:-)</span></p>
   		<h1 align = "center"><strong>Thank you '.$username.'!</strong> Your user has been activated.</h1></br>
-			<form action="../index.php" method="get">
+			<form action="../login.php" method="get">
 				<fieldset>
 					<p align="center"><input type="submit" value="Return to home page"></p>
 				</fieldset>

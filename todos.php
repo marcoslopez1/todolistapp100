@@ -6,9 +6,9 @@ setcookie(session_name(),session_id(),time()+$sessionlifetime);
 
 require 'includes/dbh.inc.php';
 
-//In case user is not logged in, we are redirecting to index.php:
+//In case user is not logged in, we are redirecting to login.php:
 if (!isset($_SESSION['username'])) {
-  header('Location: index.php');
+  header('Location: login.php');
 }
 
 $itemsQuery = $db->prepare("

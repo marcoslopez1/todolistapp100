@@ -11,7 +11,7 @@ if(isset($_POST['login'])) {
   //Now we check for errors:
   //First thing is to check if either the email or the password are empty
   if (empty($mailuid) || empty($password)) {
-    header("Location: ../index.php?error=emptyfields");
+    header("Location: ../login.php?error=emptyfields");
     exit();
   }
   //Now we find the match for the users and the pass in the db
@@ -20,7 +20,7 @@ if(isset($_POST['login'])) {
     $stmt = mysqli_stmt_init($conn);
     //In case the connection or the stmt didn't work
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-      header("Location: ../index.php?error=sqlerror");
+      header("Location: ../login.php?error=sqlerror");
       exit();
     }
     else {
@@ -34,7 +34,7 @@ if(isset($_POST['login'])) {
         //This password_verify function returns a true or a false result
         $pwdCheck = password_verify($password, $row['password']);
         if ($pwdCheck == false) {
-          header("Location: ../index.php?error=wrongpwd");
+          header("Location: ../login.php?error=wrongpwd");
           exit();
         }
         //In case the password matchs
@@ -49,17 +49,17 @@ if(isset($_POST['login'])) {
           $_SESSION['name'] = $row['name'];
           $_SESSION['userid'] = $row['id'];
 
-          header("Location: ../index.php?login=success");
+          header("Location: ../login.php?login=success");
           exit();
         }
         //In case there is an error with our code
         else {
-          header("Location: ../index.php?error=wrongpwd");
+          header("Location: ../login.php?error=wrongpwd");
           exit();
         }
       }
       else {
-        header("Location: ../index.php?error=nouser");
+        header("Location: ../login.php?error=nouser");
         exit();
       }
     }
@@ -68,7 +68,7 @@ if(isset($_POST['login'])) {
 
 }
 else {
-  header("Location: ../index.php");
+  header("Location: ../login.php");
   exit();
 }
 

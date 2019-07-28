@@ -23,7 +23,7 @@ if (isset($_GET['request'])=="sent") {
 	echo '<div id="login">
 			<p><span class="btn-round">:-)</span></p>
 			<h1 align = "center"><strong>We have received your request.</strong> Please, check you email for further instructions.</h1></br>
-				<form action="index.php" method="get">
+				<form action="login.php" method="get">
 					<fieldset>
 						<p align="center"><input type="submit" value="Return to home page"></p>
 					</fieldset>
