@@ -4,7 +4,7 @@
 //phpmailer_activation.php?action=sendemailtoactivate&email=".$email."&username=".$username
 
 //url we send to users:
-//http://83.165.235.220:5001/to_do_list_app/includes/activation.inc.php?activation=useractivation&username=marcos
+//http://83.165.235.220:5001/to_do_list_app/app/includes/activation.inc.php?activation=useractivation&username=marcos
 
 $email=$_GET['email'];
 $username=$_GET['username'];
@@ -40,7 +40,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Activate your user';
-    $url = "http://83.165.235.220:5001/to_do_list_app/includes/activation.inc.php?activation=useractivation&username=".$username;
+    $url = "http://83.165.235.220:5001/to_do_list_app/app/includes/activation.inc.php?activation=useractivation&username=".$username;
     $mail->Body    = 'Hi '.$username.',<br/><br/>We have received your request to create a new user.<br/>Please, <b>click on the next link to activate your account</b>.<br/>Thank you.<br/><br/>'.$url.'<br/><br/>In case you have never requested this action, please ignore this message.';
 //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

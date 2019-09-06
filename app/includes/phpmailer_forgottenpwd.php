@@ -47,7 +47,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Instructions to change your password';
-    $url = "http://83.165.235.220:5001/to_do_list_app/newpwd.php?request=changepassword&hashedemail=".$hashedemail;
+    $url = "http://83.165.235.220:5001/to_do_list_app/app/newpwd.php?request=changepassword&hashedemail=".$hashedemail;
     $mail->Body    = 'Hi there,<br/><br/>We have received your request to change your password. Please <b>click on the link below</b> for further instructions.<br/>Thank you.<br/><br/>'.$url.'<br/><br/>In case you have never requested this action, please ignore this message.';
 //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
