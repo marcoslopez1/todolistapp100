@@ -21,7 +21,7 @@
 ## Table of Contents
  
 
-- [Fork me on GitHub](#Fork me on GitHub)
+- [Use](#Use)
 
 - [Features](#features)
 
@@ -29,7 +29,7 @@
 
 
 
-## Fork me on GitHub
+## Use
 
  
 Discover our app, available right here, right now.
@@ -47,27 +47,21 @@ Our app is available on a cloud option for all kind of users and it's also possi
 
 Minilamistic Features, Unlimited Fun. Check out what you can do with this app!
 
-* Multiplatform
+* Multiplatform: 
 Since this app runs on web server, you can access your data from all the devices you want.
 
-* Don't miss out
+* Don't miss out: 
 You'll never forget a little detail you have to do late. Just write it down and keep doing what you're doing.
 
-* Free to Use
+* Free to Use: 
 Free cloud verions available for all type of users. Read our terms and coditions for more information.
 
-* Open Source
+* Open Source: 
 Fork available in GitHub. Just download, install and start using it.
-
-<p align="center">
-  <img src = "http://i.imgur.com/IkSnFRL.png" width=700>
-</p>
 
  
 
 ## Feedback
-
- 
 
 We like meeting new friends!
 
