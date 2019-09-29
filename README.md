@@ -1,7 +1,7 @@
 <h1 align="center"> ToDoList App </h1> <br>
 
 <p align="center">
-  <a href="https://gitpoint.co/">
+  <a>
     <img alt="" title="" src="https://marcoslopezsite.com/apps/todolistapp/app/images/favicon.png" width="100">
   </a>
 </p>
