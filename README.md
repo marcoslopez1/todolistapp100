@@ -1,18 +1,18 @@
-<h1 align="center"> GitPoint </h1> <br>
+<h1 align="center"> ToDoList App </h1> <br>
 
 <p align="center">
   <a href="https://gitpoint.co/">
-    <img alt="GitPoint" title="GitPoint" src="https://marcoslopezsite.com/apps/todolistapp/app/images/favicon.png" width="450">
+    <img alt="" title="" src="https://marcoslopezsite.com/apps/todolistapp/app/images/favicon.png" width="100">
   </a>
 </p>
 
 <p align="center">
-  GitHub in your pocket. Built with React Native.
+  Minimalistic and dynamic To Do List for your daily reminders and notes. Don't forget about that little detail anymore, write it down and smash it when it's done!
 </p>
 
 <p align="center">
   <a href="https://marcoslopezsite.com/apps/todolistapp/landing/">
-    <img alt="Download on the App Store" title="" src="https://marcoslopezsite.com/apps/todolistapp/landing/img/trial.png" width="140">
+    <img alt="" title="" src="https://marcoslopezsite.com/apps/todolistapp/landing/img/trial.png" width="200">
   </a>
 </p>
 
