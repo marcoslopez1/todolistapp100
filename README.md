@@ -51,7 +51,7 @@ Minilamistic Features, Unlimited Fun. Check out what you can do with this app!
 Since this app runs on web server, you can access your data from all the devices you want.
 
 * Don't miss out: 
-You'll never forget a little detail you have to do late. Just write it down and keep doing what you're doing.
+You'll never forget a little detail you have to do later on. Just write it down and keep doing what you're doing.
 
 * Free to Use: 
 Free cloud verions available for all type of users. Read our terms and coditions for more information.
@@ -65,6 +65,6 @@ Fork available in GitHub. Just download, install and start using it.
 
 We like meeting new friends!
 
-Send us an email to todolistapp@marcoslopezsite.com
+Send us an email to contact@marcoslopezsite.com
 
 
